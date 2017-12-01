@@ -12,6 +12,6 @@
 */
 
 Route::get('/', function () {
-	return "watagatapitusberry";
+	return "raspberry";
     return view('welcome');
 });
