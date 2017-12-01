@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+	return "watagatapitusberry";
     return view('welcome');
 });
