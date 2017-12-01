@@ -11,11 +11,12 @@
 |
 */
 use DB;
+use Request;
 use Response;
 
-Route::get('/test2', function () {
-	$mat = 'a0133455';
-	$rows = DB::raw('SELECT id, fName, lName, passwrd, accessType FROM Users WHERE matricula = "$mat"');
+Route::get('/Login', function () {
+	$mat = Request::get('matricula', 'a0133455');
+	$db_response = DB::raw('SELECT id, fName, lName, passwrd, accessType FROM Users WHERE matricula = "$mat"');
 
-	return Response::json($rows);
+	return Response::json($db_response);
 });
