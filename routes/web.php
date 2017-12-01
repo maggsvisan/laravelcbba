@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/test2', function () {
 	return "raspberry";
     return view('welcome');
 });
